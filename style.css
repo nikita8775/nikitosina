@@ -1,0 +1,414 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    color: #fff;
+    font-size: 16px;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+.wrapper {
+    background: linear-gradient(90deg, rgba(25, 25, 25, 1) 0%, rgba(0, 0, 0, 1) 0%, rgba(135, 0, 161, 1) 100%);
+    width: 100%;
+}
+
+.container {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 50px 170px;
+}
+
+header {
+    padding: 50px 0;
+}
+
+header .logo, footer .blocks .logo {
+    text-transform: uppercase;
+    font-size: 29px;
+    font-weight: 800;
+}
+
+header nav {
+    float: right;
+    width: 50%;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+header nav ul li {
+    display: inline-block;
+}
+
+header nav ul li a {
+    color: #fff;
+}
+
+header nav ul li.active::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 5px;
+    background: #EE82EE;
+    border-radius: 10px;
+    position: relative;
+    top: 7px;
+}
+
+header nav ul li:not(.active):not(.btn) a:hover {
+    border-bottom: 5px solid #EE82EE;
+}
+
+header nav ul li.btn a, .email .block button {
+    background: #EE82EE;
+    padding: 9px 17px;
+    border-radius: 5px;
+    transition: all 500ms ease;
+}
+
+header nav ul li.btn a:hover, .email .block button {
+    background: hsl(300, 55%, 32%);
+}
+
+.hero {
+    padding-bottom: 100px;
+    position: relative;
+    overflow: hidden; /* Чтобы избежать наложений */
+}
+
+.hero--info {
+    width: 100%;
+    max-width: 530px;
+    padding-top: 170px;
+    z-index: 10; /* Чтобы текст был поверх изображения */
+    position: relative;
+}
+
+.hero--info h2 {
+    color: #7B68EE;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.hero--info h1 {
+    font-size: 50px;
+    font-weight: 600;
+}
+
+.hero--info p {
+    font-weight: 500;
+    line-height: 170%;
+    margin: 30px 0;
+}
+
+.hero--info .btn {
+    background: #EE82EE;
+    color: #fff;
+    border-radius: 50px;
+    padding: 15px 30px;
+    border: 0;
+    transition: all 500ms ease;
+    width: 140px;
+    font-size: 18px;
+}
+
+.hero--info .btn:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.yyy {
+    width: 50%;
+    height: 68vh;
+    position: absolute;
+    top: 15em;
+    right: 0;
+    z-index: 1; /* Изменено на 1, чтобы текст был сверху */
+    animation-name: der;
+    animation-duration: 2s;
+}
+
+@keyframes der {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Секция с книгами */
+.trending h3 {
+    font-weight: 600;
+    font-size: 2em;
+}
+
+.trending .see-all {
+    color: #fff;
+    background: #EE82EE;
+    border-radius: 5px;
+    padding: 12px 23px;
+    float: right;
+    display: block;
+    transition: all 500ms ease;
+}
+
+.trending .see-all:hover {
+    background: hsl(300, 55%, 32%);
+    transform: scale(1.1);
+}
+
+.trending .block {
+    display: flex;
+    flex-wrap: wrap; /* Чтобы блоки корректно размещались */
+    justify-content: space-between;
+    width: 100%;
+    padding: 50px 0;
+}
+
+.r, .t, .y, .u {
+    width: calc(25% - 20px);
+    height: 20em;
+    margin: 10px; /* Для равномерного отступа */
+    animation-name: uuu;
+    animation-duration: 2s;
+}
+
+.text1, .text2, .text3, .text4 {
+    font-weight: 600;
+    font-size: 2em;
+    margin: 10px 0;
+    animation-name: uuu;
+    animation-duration: 2s;
+}
+
+.text3, .text4 {
+    animation-name: tyy;
+}
+
+#anim{
+    animation-name: anim;
+    animation-duration: 2s;
+    animation-delay: 0.4s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+.btn {
+    opacity: 0;
+    animation-name: bt;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes bt {
+    0%{opacity: 0;}
+    50%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+@keyframes tyy {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes uuu {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes anim {
+    0%{
+        opacity: 0;
+        color: black;
+        transform: translateX(-100%);
+    }
+    50%{
+        color: rgb(116, 100, 100);
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+        color: white;
+        transform: translateX(0);
+    }
+}
+
+/* Нижняя часть */
+.email {
+    padding-bottom: 120px;
+}
+
+.email h3 {
+    margin-top: 60px;
+    font-size: 30px;
+}
+
+.email .block {
+    background: #7B68EE;
+    margin-top: 30px;
+    border-radius: 10px;
+    padding: 50px 3%;
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.email .block h4 {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.email .block p {
+    width: 500;
+}
+
+.email .block input {
+    background: #fff;
+    outline: none;
+    border: 0;
+    border-radius: 5px;
+    width: 380px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    padding: 20px 30px;
+    position: relative;
+    z-index: 2; /* Убедитесь, что поле ввода на переднем плане */
+}
+
+.email .block input::placeholder {
+    color: #898989;
+}
+
+.email .block button {
+    cursor: pointer;
+    border: 0;
+    padding: 13px 17px;
+    position: relative;
+    z-index: 2;
+    right: 130px; /* Измените это значение, если нужно для правильного расположения */
+    color: #fff;
+}
+
+footer {
+    padding: 50px 0;
+    width: 100%;
+    max-width: 1920px;
+}
+
+footer .blocks {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Чтобы элементы корректно размещались */
+    position: relative;
+    right: 0; /* Убедитесь, что футер центрируется */
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    header nav {
+        float: none;
+        width: 100%;
+    }
+
+    header nav ul {
+        flex-direction: column;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+    }
+
+    .hero--info {
+        padding-top: 50px;
+        text-align: center;
+    }
+
+    .hero--info h1 {
+        font-size: 30px;
+    }
+
+    .hero--info .btn {
+        width: 100%;
+    }
+
+    .trending .block {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .r, .t, .y, .u {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .email .block {
+        /* flex-direction: column; */
+        align-items: flex-start;
+        width: 100%;
+        height: 30vh;
+    }
+
+    .email .block input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    footer .blocks {
+        flex-direction: column;
+        align-items: flex-start; /* Для лучшего выравнивания */
+    }
+    .yyy {
+        width: 100%;
+        max-width: 35%;
+        height: 100vh;
+        max-height: 40%;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    .con {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .cons{
+        margin-left: 15px;
+    }
+}
